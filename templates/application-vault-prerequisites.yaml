@@ -19,7 +19,6 @@ spec:
       {{- if .Values.vault.cloud.enable.gcp }}
       - name: cloud.enable.gcp
         value: '{{ .Values.vault.cloud.enable.gcp }}'
-        forceString: true
       {{- end }}
     {{- end }}
     repoURL: https://glueops.github.io/platform-helm-charts
