@@ -56,8 +56,6 @@ spec:
             VAULT_CACERT: /vault/userconfig/vault-tls/ca.crt
             VAULT_TLSCERT: /vault/userconfig/vault-tls/tls.crt
             VAULT_TLSKEY: /vault/userconfig/vault-tls/tls.key
-            GOOGLE_REGION: "us-central1"
-            GOOGLE_PROJECT: "yolo1-apps-141715"
             GOOGLE_CREDENTIALS: /vault/userconfig/cloud-kms-credentials/GOOGLE_CREDENTIALS
 
           # extraVolumes is a list of extra volumes to mount. These will be exposed
@@ -91,7 +89,7 @@ spec:
 
                   seal "gcpckms" {	
                     project     = "yolo1-apps-141715"	
-                    region      = "us-central1"	
+                    region      = "global"	
                     key_ring    = "apps-141715"	
                     crypto_key  = "encrypt_decrypt-apps-141715"	
                   }
