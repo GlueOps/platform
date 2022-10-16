@@ -23,5 +23,5 @@ spec:
   source:
     path: ''
     repoURL: 'https://glueops.github.io/platform-helm-charts'
-    targetRevision: 0.1.0
+    targetRevision: 0.1.1
     chart: glueops-vault-prerequisites
