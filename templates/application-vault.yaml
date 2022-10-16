@@ -56,12 +56,19 @@ spec:
             VAULT_CACERT: /vault/userconfig/vault-tls/ca.crt
             VAULT_TLSCERT: /vault/userconfig/vault-tls/tls.crt
             VAULT_TLSKEY: /vault/userconfig/vault-tls/tls.key
+            GOOGLE_REGION: "us-central1"
+            GOOGLE_PROJECT: "yolo1-141715-apps"
 
           # extraVolumes is a list of extra volumes to mount. These will be exposed
           # to Vault in the path `/vault/userconfig/<name>/`.
           extraVolumes:
             - type: secret
               name: vault-tls
+
+          extraSecretEnvironmentVars:
+            - envName: GOOGLE_CREDENTIALS
+              secretName: cloud-kms-credentials
+              secretKey: GOOGLE_CREDENTIALS
 
           standalone:
             enabled: false
