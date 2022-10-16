@@ -4,8 +4,8 @@ metadata:
   name: vault-prerequisites
 spec:
   destination:
+    name: in-cluster
     namespace: glueops-core-vault
-    server: https://kubernetes.default.svc
   project: glueops-core
   source:
     chart: glueops-vault-prerequisites

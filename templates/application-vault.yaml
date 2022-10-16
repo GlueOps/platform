@@ -5,11 +5,9 @@ metadata:
   namespace: glueops-core
 spec:
   destination:
-    name: ''
+    name: in-cluster
     namespace: glueops-core-vault
-    server: 'https://kubernetes.default.svc'
   source:
-    path: ''
     repoURL: 'https://helm.releases.hashicorp.com'
     targetRevision: 0.21.0
     chart: vault
