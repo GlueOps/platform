@@ -90,6 +90,14 @@ spec:
                     tls_client_ca_file = "/vault/userconfig/vault-tls/ca.crt"
                     tls_min_version = "tls12"
                   }
+
+                  seal "gcpckms" {	
+                    project     = "yolo1-141715-apps"	
+                    region      = "global"	
+                    key_ring    = "apps-141715"	
+                    crypto_key  = "encrypt_decrypt-apps-141715"	
+                  }
+                  
                   storage "raft" {
                     path = "/vault/data"
                     retry_join {
