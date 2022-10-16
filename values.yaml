@@ -24,6 +24,21 @@ certManager:
 
 vault:
   hostname: nil
+  cloud:
+    enable:
+      aws: false
+      gcp: false
+    credentials:
+      aws:
+        AWS_ACCESS_KEY_ID: nil
+        AWS_SECRET_ACCESS_KEY: nil
+        AWS_REGION: nil
+      gcp:
+        GOOGLE_CREDENTIALS: nil
+        GOOGLE_PROJECT: nil
+        KMS_KEY_RING: nil
+        KMS_CRYPTO_KEY: nil
+    
 
 grafana:
   hostname: nil
