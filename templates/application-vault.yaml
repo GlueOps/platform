@@ -91,7 +91,7 @@ spec:
 
                   seal "gcpckms" {	
                     project     = "yolo1-apps-141715"	
-                    region      = "global"	
+                    region      = "us-central1"	
                     key_ring    = "apps-141715"	
                     crypto_key  = "encrypt_decrypt-apps-141715"	
                   }
