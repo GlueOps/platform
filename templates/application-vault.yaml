@@ -39,6 +39,7 @@ spec:
           
         server:
           ingress:
+              activeService: false
               annotations: 
                 cert-manager.io/cluster-issuer: glueops-cert-zerossl-prod
                 kubernetes.io/ingress.class: internal-ingress-nginx
