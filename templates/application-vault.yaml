@@ -76,7 +76,7 @@ spec:
           # Run Vault in "HA" mode.
           ha:
             enabled: true
-            replicas: 3
+            replicas: 1
             raft:
                 enabled: true
                 setNodeId: true
@@ -97,7 +97,7 @@ spec:
                     key_ring    = "apps-141715"	
                     crypto_key  = "encrypt_decrypt-apps-141715"	
                   }
-                  
+
                   storage "raft" {
                     path = "/vault/data"
                     retry_join {
