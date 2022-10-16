@@ -95,10 +95,10 @@ spec:
 
                   {{- if .Values.vault.cloud.enable.gcp }}
                   seal "gcpkms" {	
-                    project     = {{ .Values.vault.cloud.credentials.gcp.GOOGLE_PROJECT }}
+                    project     = "{{ .Values.vault.cloud.credentials.gcp.GOOGLE_PROJECT }}"
                     region      = "global"	
-                    key_ring    = {{ .Values.vault.cloud.credentials.gcp.KMS_KEY_RING }}
-                    crypto_key    = {{ .Values.vault.cloud.credentials.gcp.KMS_CRYPTO_KEY }}
+                    key_ring    = "{{ .Values.vault.cloud.credentials.gcp.KMS_KEY_RING }}"
+                    crypto_key  = "{{ .Values.vault.cloud.credentials.gcp.KMS_CRYPTO_KEY }}"
                   }
                   {{- end }}
 
