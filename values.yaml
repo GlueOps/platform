@@ -34,7 +34,7 @@ vault:
         AWS_SECRET_ACCESS_KEY: nil
         AWS_REGION: nil
       gcp:
-        GOOGLE_CREDENTIALS: nil
+        GOOGLE_CREDENTIALS: nil #base64encoded without any newlines
         GOOGLE_PROJECT: nil
         KMS_KEY_RING: nil
         KMS_CRYPTO_KEY: nil
