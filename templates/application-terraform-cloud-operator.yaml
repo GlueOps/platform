@@ -17,7 +17,7 @@ spec:
       - name: cloud.enable.gcp
         value: '{{ .Values.terraformCloudOperator.cloud.enable.gcp }}'
       - name: cloud.credentials.gcp.GOOGLE_CREDENTIALS
-        value: '{{ .Values.vault.cloud.credentials.gcp.GOOGLE_CREDENTIALS }}'
+        value: '{{ .Values.terraformCloudOperator.cloud.credentials.gcp.GOOGLE_CREDENTIALS }}'
       {{- end }}
       - name: terraform.syncWorkspace.logLevel
         value: debug
