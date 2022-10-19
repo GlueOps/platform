@@ -4,7 +4,7 @@ metadata:
   name: terraform-cloud-operator
 spec:
   destination:
-    namespace: terraform-cloud-operator
+    namespace: glueops-core-terraform-cloud-operator
     name: in-cluster
   project: glueops-core
   source:
