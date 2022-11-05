@@ -25,6 +25,8 @@ spec:
     chart: glueops-cert-manager
   project: glueops-core
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
