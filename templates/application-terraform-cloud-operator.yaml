@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: terraform-cloud-operator
   annotations:
-    argocd.argoproj.io/sync-wave: "-9"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   destination:
     namespace: glueops-core-terraform-cloud-operator

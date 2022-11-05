@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: vault-prerequisites
   annotations:
-    argocd.argoproj.io/sync-wave: "-9"  
+    argocd.argoproj.io/sync-wave: "2"  
 spec:
   destination:
     name: in-cluster

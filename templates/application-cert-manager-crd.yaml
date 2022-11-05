@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: cert-manager-crds
   annotations:
-    argocd.argoproj.io/sync-wave: "-10"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   destination:
     name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}

@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: external-ingress-nginx
   annotations:
-    argocd.argoproj.io/sync-wave: "-9"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   destination:
     name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
