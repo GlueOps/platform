@@ -33,8 +33,10 @@ spec:
       {{- end }}
       - name: terraform.syncWorkspace.logLevel
         value: debug
+      - name: global.terraform_cloud_organization_name
+        value: '{{ .Values.terraformCloudOperator.global.terraform_cloud_organization_name }}'
     repoURL: https://glueops.github.io/platform-helm-charts
-    targetRevision: 0.2.0
+    targetRevision: 0.5.1
   syncPolicy:
     automated:
       prune: true
