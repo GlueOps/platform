@@ -8,7 +8,6 @@ spec:
   destination:
     name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
     namespace: glueops-core-cert-manager
-    server: ''
   source:
     path: ''
     repoURL: 'https://glueops.github.io/platform-helm-charts'

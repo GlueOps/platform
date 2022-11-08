@@ -39,6 +39,8 @@ certManager:
 
 vault:
   hostname: nil
+  config:
+    glues_env: nil
   cloud:
     enable:
       aws: false

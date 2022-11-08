@@ -8,7 +8,6 @@ spec:
   destination:
     name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
     namespace: glueops-core-external-dns
-    server: ''
   source:
     path: ''
     repoURL: 'https://charts.bitnami.com/bitnami'

@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   destination:
-    name: in-cluster
+    name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
     namespace: glueops-core-kube-prometheus-stack
   project: glueops-core
   syncPolicy:

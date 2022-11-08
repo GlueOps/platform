@@ -6,8 +6,8 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   destination:
+    name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
     namespace: glueops-core-terraform-cloud-operator
-    name: in-cluster
   project: glueops-core
   source:
     chart: glueops-terraform-cloud-operator
