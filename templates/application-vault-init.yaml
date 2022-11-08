@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: vault-init
   annotations:
-    argocd.argoproj.io/sync-wave: "5"  
+    argocd.argoproj.io/sync-wave: "4"  
 spec:
   destination:
     name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
