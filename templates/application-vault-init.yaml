@@ -28,6 +28,5 @@ spec:
         duration: 30s
         factor: 2
         maxDuration: 3m0s
-      limit: 5
     syncOptions:
     - CreateNamespace=true
