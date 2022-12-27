@@ -27,6 +27,10 @@ spec:
     helm:
       skipCrds: true
       values: |-
+        prometheus:
+          prometheusSpec:
+            podMonitorSelectorNilUsesHelmValues: false
+            serviceMonitorSelectorNilUsesHelmValues: false
         grafana:
           # username is 'admin'
           adminPassword: prom-operator
