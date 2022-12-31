@@ -15,23 +15,6 @@ gitHub:
 externalDns:
   cloudflare_api_token: nil
 
-
-terraformCloudOperator:
-  terraform_cloud_api_token: nil
-  terraform_cloud_organization_name: nil
-  cloud:
-    enable:
-      aws: false
-      gcp: false
-    credentials:
-      aws:
-        AWS_ACCESS_KEY_ID: nil
-        AWS_SECRET_ACCESS_KEY: nil
-        AWS_REGION: nil
-      gcp:
-        GOOGLE_CREDENTIALS: nil #base64encoded without any newlines
-
-
 certManager:
   cloudflare_api_token: nil
   zerossl_eab_hmac_key: nil
@@ -41,21 +24,7 @@ vault:
   hostname: nil
   config:
     glues_env: nil
-  cloud:
-    enable:
-      aws: false
-      gcp: false
-    credentials:
-      aws:
-        AWS_ACCESS_KEY_ID: nil
-        AWS_SECRET_ACCESS_KEY: nil
-        AWS_REGION: nil
-        AWS_KMS_ENDPOINT: nil
-      gcp:
-        GOOGLE_CREDENTIALS: nil #base64encoded without any newlines
-        GOOGLE_PROJECT: nil
-        KMS_KEY_RING: nil
-        KMS_CRYPTO_KEY: nil
+
     
 
 grafana:
