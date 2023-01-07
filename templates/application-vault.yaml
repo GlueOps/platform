@@ -78,6 +78,9 @@ spec:
                     tls_key_file  = "/vault/userconfig/vault-tls/tls.key"
                     tls_client_ca_file = "/vault/userconfig/vault-tls/ca.crt"
                     tls_min_version = "tls12"
+                    telemetry {
+                      unauthenticated_metrics_access = true
+                    }
                   }
 
                   storage "raft" {
@@ -99,6 +102,12 @@ spec:
                       server_stabilization_time = "10s"
                     }
 
+                  }
+                  
+                  telemetry {
+                      disable_hostname = true
+                      prometheus_retention_time = "30s"
+                      enable_hostname_label = true
                   }
 
                   service_registration "kubernetes" {}
