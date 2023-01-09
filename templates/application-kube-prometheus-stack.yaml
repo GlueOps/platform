@@ -54,23 +54,4 @@ spec:
                allowed_organizations: {{ .Values.grafana.github_org_names }}
                client_id: {{ .Values.grafana.github_client_id }}
                client_secret: {{ .Values.grafana.github_client_secret }}
-        prometheus:
-          prometheusSpec:
-            additionalScrapeConfigs:
-              - job_name: 'vault'
-                scheme: 'https'
-                kubernetes_sd_configs:
-                  - role: endpoints
-                    namespaces:
-                      names:
-                        - glueops-core-vault
-                metrics_path: '/v1/sys/metrics'
-                tls_config:
-                  insecure_skip_verify: true
-                relabel_configs:
-                  - source_labels: [__meta_kubernetes_pod_container_port_number]
-                    regex: 8200
-                    action: keep
-
-                  
     chart: kube-prometheus-stack
