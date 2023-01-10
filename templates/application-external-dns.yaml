@@ -19,6 +19,10 @@ spec:
           value: {{ .Values.cloudflare_api_token }}
         - name: provider
           value: cloudflare
+        - name: metrics.enabled
+          value: "true"
+        - name: metrics.serviceMonitor.enabled
+          value: "true"
   project: glueops-core
   syncPolicy:
     syncOptions:
