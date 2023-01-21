@@ -10,13 +10,11 @@ spec:
     namespace: glueops-core-cert-manager
   source:
     path: ''
-    repoURL: 'https://helm.gpkg.io/platform'
-    targetRevision: 0.1.0
+    repoURL: 'https://incubating-helm.gpkg.io/platform'
+    targetRevision: 0.2.0-venkata-3
     helm:
       skipCrds: true
       parameters:
-        - name: cert-manager.cloudflare_api_token
-          value: {{ .Values.cloudflare_api_token }}
         - name: cert-manager.zerossl_eab_hmac_key
           value: {{ .Values.certManager.zerossl_eab_hmac_key }}
         - name: cert-manager.zerossl_eab_kid
