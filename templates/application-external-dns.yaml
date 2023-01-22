@@ -21,6 +21,10 @@ spec:
           value: {{ .Values.externalDns.aws_accessKey }}
         - name: aws.region
           value: {{ .Values.externalDns.aws_region }}
+        - name: domainFilters[0]
+          value: {{ .Values.captain_domain }}
+        - name: policy
+          value: sync
         - name: provider
           value: aws
         - name: aws.preferCNAME
