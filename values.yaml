@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 
 
+captain_domain: nil
 
 gitHub:
   sshKey: "base64-ssh-key"
@@ -17,6 +18,9 @@ externalDns:
 certManager:
   zerossl_eab_hmac_key: nil
   zerossl_eab_kid: nil
+  aws_region: nil
+  aws_accessKey: nil
+  aws_secretKey: nil
 
 vault:
   config:
