@@ -25,7 +25,7 @@ metadata:
     managed-by: argocd.argoproj.io
   labels:
     argocd.argoproj.io/secret-type: repository
-  name: helm-glueops-project-template
+  name: helm-glueops-service
 type: Opaque
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -47,3 +47,4 @@ spec:
     name: developers
   sourceRepos:
   - https://helm.gpkg.io/project-template
+  - https://helm.gpkg.io/service
