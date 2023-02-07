@@ -4,13 +4,12 @@ metadata:
   name: glueops-pull-request-bot
 spec:
   destination:
-    name: ''
+    name: {{ index .Values "argo-cd" "glueops" "destination_cluster_for_core_apps" }}
     namespace: glueops-core-pull-request-bot
-    server: 'https://kubernetes.default.svc'
   source:
     path: kubernetes/
     repoURL: 'https://github.com/GlueOps/pull-request-bot.git'
-    targetRevision: feat/fix-entrypoint
+    targetRevision: v0.2.0
   project: glueops-core
   syncPolicy:
     syncOptions:
