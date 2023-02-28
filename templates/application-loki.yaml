@@ -11,9 +11,12 @@ spec:
   source:
     path: ''
     repoURL: 'https://grafana.github.io/helm-charts'
-    targetRevision: 4.6.1
+    targetRevision: 4.7.0
+    # repoURL: 'https://incubating-helm.gpkg.io/platform'
+    # targetRevision: 4.7.0-alpha1
     helm:
-      skipCrds: true
+      # skipCrds: true
+      # version: v3
       parameters:
         - name: loki.commonConfig.replication_factor
           value: '1'
@@ -26,6 +29,10 @@ spec:
         - name: singleBinary.persistence.enableStatefulSetAutoDeletePVC
           value: 'false'
         - name: monitoring.selfMonitoring.enabled
+          value: 'false'
+        - name: monitoring.selfMonitoring.grafanaAgent.installOperator
+          value: 'false'
+        - name:  grafana-agent-operator.enabled
           value: 'false'
         - name: test.enabled
           value: 'false'
