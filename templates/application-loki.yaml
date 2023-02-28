@@ -12,29 +12,25 @@ spec:
     path: ''
     repoURL: 'https://grafana.github.io/helm-charts'
     targetRevision: 4.7.0
-    # repoURL: 'https://incubating-helm.gpkg.io/platform'
-    # targetRevision: 4.7.0-alpha1
     helm:
-      # skipCrds: true
-      # version: v3
       parameters:
-        - name: loki.commonConfig.replication_factor
-          value: '1'
         - name: loki.auth_enabled
           value: 'false'
         - name: loki.storage.type
           value: 'filesystem'
         - name: singleBinary.replicas
           value: '1'
+        - name: loki.commonConfig.replication_factor
+          value: '1'
         - name: singleBinary.persistence.enableStatefulSetAutoDeletePVC
+          value: 'false'
+        - name: test.enabled
+          value: 'false'
+        - name:  grafana-agent-operator.enabled
           value: 'false'
         - name: monitoring.selfMonitoring.enabled
           value: 'false'
         - name: monitoring.selfMonitoring.grafanaAgent.installOperator
-          value: 'false'
-        - name:  grafana-agent-operator.enabled
-          value: 'false'
-        - name: test.enabled
           value: 'false'
     chart: loki
   project: glueops-core
