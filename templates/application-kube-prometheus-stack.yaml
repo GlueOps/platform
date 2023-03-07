@@ -33,8 +33,6 @@ spec:
           value: 'false'
       values: |-
         grafana:
-          # username is 'admin'
-          adminPassword: prom-operator
           ingress:
             enabled: true
             annotations:
@@ -48,6 +46,8 @@ spec:
           grafana.ini:
             server:
               root_url: "https://grafana.{{ .Values.captain_domain }}/"
+            security:
+              disable_initial_admin_creation: true
             auth.github:
                enabled: true
                allow_sign_up: true
