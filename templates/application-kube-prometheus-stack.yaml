@@ -67,6 +67,11 @@ spec:
           - name: Loki
             type: loki
             url: {{ .Values.grafana.loki_data_source_domain }}
+          - name: Alertmanager
+            type: alertmanager
+            jsonData:
+              implementation: prometheus
+            url: "http://kube-prometheus-stack-alertmanager.glueops-core-kube-prometheus-stack:9093/"
           grafana.ini:
             server:
               root_url: "https://grafana.{{ .Values.captain_domain }}/"
