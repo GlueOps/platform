@@ -38,14 +38,16 @@ spec:
           enabled: false
         alertmanager:
           alertmanagerSpec:
+            image:
+              registry: ghcr.io
+              repository: glueops/alertmanager
+              tag: v0.25.0-glueops
             logLevel: debug
             # This externalURL is a hack. Alertmanager will reference back to itself per the code here: https://github.com/prometheus/alertmanager/blob/v0.25.0/template/default.tmpl#L2
-            # But given the effort level to change it is _high_ i went ahead and did this. It seems to work for now. It's something we will need to continue to regressions on.
-            # At some point we will have to fork it. Hopefully we a larger team by then.
             # Example when alert manager renders my hack: 
-            # https://grafana.{{ .Values.captain_domain }}/alerting/list/#/alerts?receiver=venkata%2Fglu
+            # https://grafana.{{ .Values.captain_domain }}/alerting/list
             # - Note: the captain domain does get replaced with the actual captain domain
-            externalUrl: https://grafana.{{ .Values.captain_domain }}/alerting/list/
+            externalUrl: https://grafana.{{ .Values.captain_domain }}/alerting/list
         defaultRules:
           disabled:
             KubePodNotReady: true
