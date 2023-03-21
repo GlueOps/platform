@@ -1,4 +1,4 @@
-name: Update Helm Docs
+name: Generate Docs
 
 on:
   push
