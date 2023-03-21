@@ -1,0 +1,7 @@
+name: Update Helm Docs
+  push:
+
+jobs:
+  call-workflow-passing-data:
+    uses: GlueOps/github-workflows/.github/workflows/helm-docs.yml@feat/helm-docs
+    secrets: inherit
