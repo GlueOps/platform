@@ -1,8 +1,7 @@
 name: Update Helm Docs
 
 on:
-  push:
-    - '*'
+  push
 
 jobs:
   call-workflow-passing-data:
