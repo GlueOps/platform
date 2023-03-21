@@ -1,4 +1,6 @@
 name: Update Helm Docs
+
+on:
   push:
     - '*'
 
