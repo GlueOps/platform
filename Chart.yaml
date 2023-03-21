@@ -1,6 +1,6 @@
 apiVersion: v2
 appVersion: v0.1.0
-description: GlueOps Helm Chart for deploying ArgoCD
+description: Deploy the ArgoCD Platform. This chart is never packaged up but gets used via `helm template` command.
 name: glueops-argo-cd
 version: 0.1.0
 dependencies:
