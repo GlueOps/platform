@@ -79,6 +79,7 @@ loki:
   aws_secretKey: XXXXXXXXXXXXXXXXXXXXXXXXXX
 
 argo-cd:
+  # @ignored
   redis-ha:
     enabled: true
   controller:
