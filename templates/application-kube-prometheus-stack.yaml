@@ -73,7 +73,7 @@ spec:
           additionalDataSources:
           - name: Loki
             type: loki
-            url: {{ .Values.grafana.loki_data_source_domain }}
+            url: http://loki-read.glueops-core-loki.svc.cluster.local:3100
           - name: Alertmanager
             type: alertmanager
             jsonData:
