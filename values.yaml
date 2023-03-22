@@ -124,6 +124,7 @@ argo-cd:
         return hs
       url: "https://argocd.<cluster_env>.<tenant-name-goes-here>.glueopshosted.rocks"
       # -- To create a clientID and clientSecret please reference: https://github.com/GlueOps/github-oauth-apps
+      # This dex.config is to create a GitHub connector for SSO to ArgoCD.
       # @default -- `''` (See [values.yaml])
       dex.config: |
         connectors:
