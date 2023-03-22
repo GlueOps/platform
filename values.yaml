@@ -101,7 +101,6 @@ argo-cd:
       enabled: true
       minReplicas: 2
     config:
-      
       # @ignored
       exec.enabled: "true"
       # This helps argocd know what resources it should be manging. This way if argocd manages an operator and that operator creates a pvc, it won't try and manage the pvc.
