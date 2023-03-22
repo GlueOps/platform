@@ -82,21 +82,28 @@ argo-cd:
   # @ignored
   redis-ha:
     enabled: true
+  # @ignored
   controller:
     replicas: 1
+  # @ignored
   repoServer:
     autoscaling:
       enabled: true
       minReplicas: 2
+  # @ignored
   applicationSet:
     replicaCount: 2
   server:
+    # @ignored
     autoscaling:
       enabled: true
       minReplicas: 2
     config:
+      # @ignored
       exec.enabled: "true"
+      # @ignored
       application.resourceTrackingMethod: "annotation+label"
+      # @ignored
       resource.customizations.health.argoproj.io_Application: |
         hs = {}
         hs.status = "Progressing"
@@ -110,6 +117,7 @@ argo-cd:
           end
         end
         return hs
+      # @ignored
       resource.customizations.health.external-secrets.io_ExternalSecret: |
         hs = {}
         hs.status = "Healthy"
@@ -136,12 +144,16 @@ argo-cd:
         p, role:developers, repositories, *, development/*, allow
         p, role:developers, applications, *, development/*, allow
         p, role:developers, exec, *, development/*, allow
+    # @ignored
     extraArgs:
       - --insecure
+    # @ignored
     service:
       type: ClusterIP
     ingress:
       hosts: ["argocd.<cluster_env>.<tenant-name-goes-here>.glueopshosted.rocks"]
+      # @ignored
       enabled: true
+      # @ignored
       annotations:
         kubernetes.io/ingress.class: "internal-ingress-nginx"
