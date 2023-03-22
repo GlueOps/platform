@@ -55,19 +55,15 @@ certManager:
   # -- Should be the same `primary_region` you used in: https://github.com/GlueOps/terraform-module-cloud-multy-prerequisites
   aws_region: us-west-2
 
-vault:
-  config:
-    glues_env: nil
-
 grafana:
   github_client_id: XXXXXXXXXXXXXXXXXXXXXXXXXX
   github_client_secret: XXXXXXXXXXXXXXXXXXXXXXXXXX
+  # @ignored
   github_admin_org_name: GlueOps
+  # @ignored
   github_admin_team_name: grafana_super_admins
   github_other_org_names: glueops-rocks
 
-promtail:
-  client_url: http://loki-write.glueops-core-loki.svc.cluster.local:3100/loki/api/v1/push
 
 loki:
   # -- Format: glueops-tenant-<tenant-name-goes-here>-<cluster_env>-loki-primary
