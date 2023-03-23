@@ -4,6 +4,7 @@
 
 Deploy the ArgoCD Platform. This chart is never packaged up but gets used via `helm template` command.
 
+
 ## Requirements
 
 | Repository | Name | Version |
